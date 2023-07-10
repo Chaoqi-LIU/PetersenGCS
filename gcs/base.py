@@ -184,6 +184,7 @@ class BaseGCS:
 
     def VisualizeGraph(self, file_type="svg"):
         graphviz = self.gcs.GetGraphvizString(None, False)
+        print(graphviz)
         data = pydot.graph_from_dot_data(graphviz)[0]
         if file_type == "svg":
             return data.create_svg()
