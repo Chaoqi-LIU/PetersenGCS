@@ -318,8 +318,8 @@ class BezierGCS(BaseGCS):
         best_path, best_result, results_dict = self.solveGCS(
             rounding, preprocessing, verbose)
 
-        for e in best_path:
-            print(f"{e.u().name()} -> {e.v().name()}")
+        # for e in best_path:
+        #     print(f"\"{e.name()}\"", end=', ')
 
         if best_path is None:
             return None, results_dict
